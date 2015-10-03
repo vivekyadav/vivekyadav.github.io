@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Blog]]></title>
+  <subtitle><![CDATA[A place to express my thoughts on various topics]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://vivekyadav.github.io/"/>
+  <updated>2015-10-03T04:44:57.695Z</updated>
+  <id>http://vivekyadav.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Vivek Yadav]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[So it beings...]]></title>
+    <link href="http://vivekyadav.github.io/2015/10/03/So-it-beings/"/>
+    <id>http://vivekyadav.github.io/2015/10/03/So-it-beings/</id>
+    <published>2015-10-03T04:30:00.000Z</published>
+    <updated>2015-10-03T04:44:57.695Z</updated>
+    <content type="html"><![CDATA[<p>I plan to blog here regularly or at least that is what I have told myself.<br>This blog is setup using hexo, for html generation, and github pages, for hosting.<br>I went this way instead of wordpress so as to do justice to the hackers inside me.<br>I hope he will be satisfied.</p>
+<p>My next blog post is going to be on my work with <em>Genetic Algorithms</em>. Stay tuned.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I plan to blog here regularly or at least that is what I have told myself.<br>This blog is setup using hexo, for html generation, and git]]>
+    </summary>
+    
+  </entry>
+  
+</feed>

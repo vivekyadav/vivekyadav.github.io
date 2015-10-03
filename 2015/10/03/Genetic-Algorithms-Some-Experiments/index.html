@@ -6,22 +6,22 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Blog">
-    <title>So it beings... - Blog</title>
+    <title>Genetic Algorithms: Some Experiments - Blog</title>
     <meta name="author" content="Vivek Yadav">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="I plan to blog here regularly or at least that is what I have told myself.This blog is setup using hexo, for html generation, and github pages, for hosting.I went this way instead of wordpress so as t">
+    <meta name="description" content="These past few months I have been trying out Genetic Algorithms.They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to NP-hard">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="So it beings...">
-<meta property="og:url" content="http://vivekyadav.github.io/2015/10/03/So-it-beings/index.html">
+<meta property="og:title" content="Genetic Algorithms: Some Experiments">
+<meta property="og:url" content="http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="I plan to blog here regularly or at least that is what I have told myself.This blog is setup using hexo, for html generation, and github pages, for hosting.I went this way instead of wordpress so as t">
-<meta property="og:updated_time" content="2015-10-03T04:44:57.695Z">
+<meta property="og:description" content="These past few months I have been trying out Genetic Algorithms.They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to NP-hard">
+<meta property="og:updated_time" content="2015-10-03T15:34:14.396Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="So it beings...">
-<meta name="twitter:description" content="I plan to blog here regularly or at least that is what I have told myself.This blog is setup using hexo, for html generation, and github pages, for hosting.I went this way instead of wordpress so as t">
+<meta name="twitter:title" content="Genetic Algorithms: Some Experiments">
+<meta name="twitter:description" content="These past few months I have been trying out Genetic Algorithms.They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to NP-hard">
     
     
     
@@ -198,11 +198,11 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            So it beings...
+            Genetic Algorithms: Some Experiments
         </h1>
     
     <div class="post-meta">
-    <time itemprop="datePublished" content="Sat Oct 03 2015 10:00:00 GMT+0530">
+    <time itemprop="datePublished" content="Sat Oct 03 2015 19:45:29 GMT+0530">
 	
 		    Oct 03, 2015
     	
@@ -213,8 +213,18 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <p>I plan to blog here regularly or at least that is what I have told myself.<br>This blog is setup using hexo, for html generation, and github pages, for hosting.<br>I went this way instead of wordpress so as to do justice to the hackers inside me.<br>I hope he will be satisfied.</p>
-<p>My next blog post is going to be on my work with <em>Genetic Algorithms</em>. Stay tuned.</p>
+            <p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="external">NP-hard</a> problems.</p>
+<p>Now, a genetic algoeithm can be broken down to these simple steps:</p>
+<ol>
+<li>Generate a sample population</li>
+<li>Crossover</li>
+<li>Mutate</li>
+</ol>
+<p>Recursively doing steps 2 &amp; 3 and selecting the healthier candidates at each step, till you don’t see improvements across multiple iterations.<br>The secret is that such algorithms explore a much larger space in a given time period, compared to a deterministic algorithm.<br>You can find more detailed explainations at other places on the internet so I won’t repeat it.<br>I’ll focus a specific aspect, the mutation step.</p>
+<p>Just like the crossover part, there are multiple ways to do it. People are experimenting with new ideas.<br>I got one such idea from a friend of my girlfriend. He called it “Supervised Mutation”.<br>Usually the mutation step is randomized in some way, but he put in a deterministic algorithm. So it is basically combining the powers of randomized and deterministic algorithms.</p>
+<p>For some reasons he couldn’t take his research to conclusion, but I got interested in it. Hence I have been working on it, along with my girlfriend, during the past few months, although irregularly.</p>
+<p>I have the code ready and have been trying to solve some <em>Travelling Salesman Problem</em>s, but I need my results to be standardized and comparable to others.<br>Now how would I do that ? By solving the same problems that others have solved; that way we can compare how efficienct our new algorithm is.<br>Problem was there are thousands of TSP problems.<br>Thankfully, I came across something known as <a href="http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/" target="_blank" rel="external">TSPLIB</a>. A library of problems including, Symmetric/Asymmetric traveling salesman problem, Hamiltonian cycle problem (HCP), Capacitated vehicle routing problem (CVRP) and some other related category of problems.<br>Just the thing I was looking for.</p>
+<p>So it is still a work in progress and I’ll post my findings here, along with code details, later.<br>But it sure is a refreshing change from what I do at my job at Amazon.</p>
 
             
                 
@@ -229,7 +239,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/10/03/Genetic-Algorithms-Some-Experiments/"  data-tooltip="Genetic Algorithms: Some Experiments">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -237,7 +247,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/10/03/So-it-beings/" data-tooltip="So it beings...">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -252,17 +262,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -304,7 +314,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/10/03/Genetic-Algorithms-Some-Experiments/"  data-tooltip="Genetic Algorithms: Some Experiments">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -312,7 +322,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/10/03/So-it-beings/" data-tooltip="So it beings...">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -327,17 +337,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -363,17 +373,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="4">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://vivekyadav.github.io/2015/10/03/So-it-beings/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>

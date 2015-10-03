@@ -4,7 +4,7 @@
   <subtitle><![CDATA[A place to express my thoughts on various topics]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://vivekyadav.github.io/"/>
-  <updated>2015-10-03T04:44:57.695Z</updated>
+  <updated>2015-10-03T15:34:14.396Z</updated>
   <id>http://vivekyadav.github.io/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Genetic Algorithms: Some Experiments]]></title>
+    <link href="http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/"/>
+    <id>http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/</id>
+    <published>2015-10-03T14:15:29.000Z</published>
+    <updated>2015-10-03T15:34:14.396Z</updated>
+    <content type="html"><![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="external">NP-hard</a> problems.</p>
+<p>Now, a genetic algoeithm can be broken down to these simple steps:</p>
+<ol>
+<li>Generate a sample population</li>
+<li>Crossover</li>
+<li>Mutate</li>
+</ol>
+<p>Recursively doing steps 2 &amp; 3 and selecting the healthier candidates at each step, till you don’t see improvements across multiple iterations.<br>The secret is that such algorithms explore a much larger space in a given time period, compared to a deterministic algorithm.<br>You can find more detailed explainations at other places on the internet so I won’t repeat it.<br>I’ll focus a specific aspect, the mutation step.</p>
+<p>Just like the crossover part, there are multiple ways to do it. People are experimenting with new ideas.<br>I got one such idea from a friend of my girlfriend. He called it “Supervised Mutation”.<br>Usually the mutation step is randomized in some way, but he put in a deterministic algorithm. So it is basically combining the powers of randomized and deterministic algorithms.</p>
+<p>For some reasons he couldn’t take his research to conclusion, but I got interested in it. Hence I have been working on it, along with my girlfriend, during the past few months, although irregularly.</p>
+<p>I have the code ready and have been trying to solve some <em>Travelling Salesman Problem</em>s, but I need my results to be standardized and comparable to others.<br>Now how would I do that ? By solving the same problems that others have solved; that way we can compare how efficienct our new algorithm is.<br>Problem was there are thousands of TSP problems.<br>Thankfully, I came across something known as <a href="http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/" target="_blank" rel="external">TSPLIB</a>. A library of problems including, Symmetric/Asymmetric traveling salesman problem, Hamiltonian cycle problem (HCP), Capacitated vehicle routing problem (CVRP) and some other related category of problems.<br>Just the thing I was looking for.</p>
+<p>So it is still a work in progress and I’ll post my findings here, along with code details, later.<br>But it sure is a refreshing change from what I do at my job at Amazon.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful ]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[So it beings...]]></title>

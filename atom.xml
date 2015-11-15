@@ -3,9 +3,9 @@
   <title><![CDATA[Blog]]></title>
   <subtitle><![CDATA[A place to express my thoughts on various topics]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://vivekyadav.github.io/"/>
+  <link href="http://www.vivek.nl/"/>
   <updated>2015-10-03T15:34:14.396Z</updated>
-  <id>http://vivekyadav.github.io/</id>
+  <id>http://www.vivek.nl/</id>
   
   <author>
     <name><![CDATA[Vivek Yadav]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Genetic Algorithms: Some Experiments]]></title>
-    <link href="http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/"/>
-    <id>http://vivekyadav.github.io/2015/10/03/Genetic-Algorithms-Some-Experiments/</id>
+    <link href="http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"/>
+    <id>http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/</id>
     <published>2015-10-03T14:15:29.000Z</published>
     <updated>2015-10-03T15:34:14.396Z</updated>
     <content type="html"><![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="external">NP-hard</a> problems.</p>
@@ -41,8 +41,8 @@
   
   <entry>
     <title><![CDATA[So it beings...]]></title>
-    <link href="http://vivekyadav.github.io/2015/10/03/So-it-beings/"/>
-    <id>http://vivekyadav.github.io/2015/10/03/So-it-beings/</id>
+    <link href="http://www.vivek.nl/2015/10/03/So-it-beings/"/>
+    <id>http://www.vivek.nl/2015/10/03/So-it-beings/</id>
     <published>2015-10-03T04:30:00.000Z</published>
     <updated>2015-10-03T04:44:57.695Z</updated>
     <content type="html"><![CDATA[<p>I plan to blog here regularly or at least that is what I have told myself.<br>This blog is setup using hexo, for html generation, and github pages, for hosting.<br>I went this way instead of wordpress so as to do justice to the hackers inside me.<br>I hope he will be satisfied.</p>

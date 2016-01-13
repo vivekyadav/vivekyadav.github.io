@@ -4,7 +4,7 @@
   <subtitle><![CDATA[A place to express my thoughts on various topics]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.vivek.nl/"/>
-  <updated>2016-01-13T10:36:56.649Z</updated>
+  <updated>2016-01-13T15:08:30.594Z</updated>
   <id>http://www.vivek.nl/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.vivek.nl/2016/01/13/Stuck-at-the-locality/"/>
     <id>http://www.vivek.nl/2016/01/13/Stuck-at-the-locality/</id>
     <published>2016-01-13T08:40:44.000Z</published>
-    <updated>2016-01-13T10:36:56.649Z</updated>
+    <updated>2016-01-13T15:08:30.594Z</updated>
     <content type="html"><![CDATA[<p>In my <a href="http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/">previous post</a>, I mentioned about working on a new type of genetic algorithm.<br>I went ahead and completed the program and tested it against data sets taken from <a href="http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/" target="_blank" rel="external">TSPLIB</a>.  </p>
 <p>At first the results were promising, especially on the ATT48 dataset, but on trying out other data sets, I realized my algorithm was getting stuck at local minima. I tried increasing the population size and various combination of parameters but it would still end up in a minimum.  </p>
 <p>I left it at that point for some time. Recently, I have started work on it again.<br>There is something known as Niching in Genetic Algorithms. I plan to use it in my algorithm and see if there is any improvement (I hope there is).  </p>
@@ -29,6 +29,14 @@
     <![CDATA[<p>In my <a href="http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/">previous post</a>, I mentioned about working on a new]]>
     </summary>
     
+      <category term="c++" scheme="http://www.vivek.nl/tags/c/"/>
+    
+      <category term="genetic-algorithm" scheme="http://www.vivek.nl/tags/genetic-algorithm/"/>
+    
+      <category term="spdlog" scheme="http://www.vivek.nl/tags/spdlog/"/>
+    
+      <category term="tsplib" scheme="http://www.vivek.nl/tags/tsplib/"/>
+    
   </entry>
   
   <entry>
@@ -36,7 +44,7 @@
     <link href="http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"/>
     <id>http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/</id>
     <published>2015-10-03T14:15:29.000Z</published>
-    <updated>2015-10-03T15:34:14.396Z</updated>
+    <updated>2016-01-13T15:05:12.886Z</updated>
     <content type="html"><![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="external">NP-hard</a> problems.</p>
 <p>Now, a genetic algoeithm can be broken down to these simple steps:</p>
 <ol>
@@ -53,6 +61,8 @@
     <summary type="html">
     <![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful ]]>
     </summary>
+    
+      <category term="genetic-algorithm, c++, tsplib" scheme="http://www.vivek.nl/tags/genetic-algorithm-c-tsplib/"/>
     
   </entry>
   

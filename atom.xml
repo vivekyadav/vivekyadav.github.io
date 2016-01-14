@@ -44,7 +44,7 @@
     <link href="http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"/>
     <id>http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/</id>
     <published>2015-10-03T14:15:29.000Z</published>
-    <updated>2016-01-13T15:05:12.886Z</updated>
+    <updated>2016-01-14T07:50:01.052Z</updated>
     <content type="html"><![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="external">NP-hard</a> problems.</p>
 <p>Now, a genetic algoeithm can be broken down to these simple steps:</p>
 <ol>
@@ -62,7 +62,11 @@
     <![CDATA[<p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful ]]>
     </summary>
     
-      <category term="genetic-algorithm, c++, tsplib" scheme="http://www.vivek.nl/tags/genetic-algorithm-c-tsplib/"/>
+      <category term="c++" scheme="http://www.vivek.nl/tags/c/"/>
+    
+      <category term="genetic-algorithm" scheme="http://www.vivek.nl/tags/genetic-algorithm/"/>
+    
+      <category term="tsplib" scheme="http://www.vivek.nl/tags/tsplib/"/>
     
   </entry>
   

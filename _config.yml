@@ -63,7 +63,33 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: tranquilpeak
+theme: cactus
+
+# this overrides config from themes/<your-theme>/_config.yml
+theme_config:
+  colorscheme: classic
+  social_links:
+    github: https://github.com/vivekyadav
+    linkedin: https://www.linkedin.com/in/vivekyadav7/
+    mail: mailto:mail@vivek.nl
+  logo:
+    enabled: true
+    width: 50
+    height: 50
+    url: /images/logo.jpg
+    gravatar: false
+  favicon:
+    desktop:
+      url: /images/favicon.ico
+      gravatar: false
+    android:
+      url: /images/android-chrome-192x192.png
+      gravatar: false
+    apple:
+      url: /images/apple-touch-icon.png
+      gravatar: false
+
+
 
 feed:
   type: atom

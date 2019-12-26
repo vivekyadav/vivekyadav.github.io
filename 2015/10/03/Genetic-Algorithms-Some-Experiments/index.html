@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="These past few months I have been trying out Genetic Algorithms.They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to NP-hard">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Genetic Algorithms: Some Experiments">
+<meta property="og:url" content="http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="These past few months I have been trying out Genetic Algorithms.They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to NP-hard">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-26T05:15:05.496Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Genetic Algorithms: Some Experiments">
+<meta name="twitter:description" content="These past few months I have been trying out Genetic Algorithms.They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to NP-hard">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Genetic Algorithms: Some Experiments</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/01/13/Stuck-at-the-locality/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/10/03/So-it-beings/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&text=Genetic Algorithms: Some Experiments"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&is_video=false&description=Genetic Algorithms: Some Experiments"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Genetic Algorithms: Some Experiments&body=Check out this article: http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&name=Genetic Algorithms: Some Experiments&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&t=Genetic Algorithms: Some Experiments"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Genetic Algorithms: Some Experiments
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Blog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2015-10-03T14:15:29.000Z" itemprop="datePublished">2015-10-03</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>These past few months I have been trying out <em>Genetic Algorithms</em>.<br>They are a very interesting, relatively simple but powerful set of algorithms which can be used to find approximate solutions to <a href="https://en.wikipedia.org/wiki/NP-hardness" target="_blank" rel="noopener">NP-hard</a> problems.</p>
+<p>Now, a genetic algoeithm can be broken down to these simple steps:</p>
+<ol>
+<li>Generate a sample population</li>
+<li>Crossover</li>
+<li>Mutate</li>
+</ol>
+<p>Recursively doing steps 2 &amp; 3 and selecting the healthier candidates at each step, till you don’t see improvements across multiple iterations.<br>The secret is that such algorithms explore a much larger space in a given time period, compared to a deterministic algorithm.<br>You can find more detailed explainations at other places on the internet so I won’t repeat it.<br>I’ll focus a specific aspect, the mutation step.</p>
+<p>Just like the crossover part, there are multiple ways to do it. People are experimenting with new ideas.<br>I got one such idea from a friend of my girlfriend. He called it “Supervised Mutation”.<br>Usually the mutation step is randomized in some way, but he put in a deterministic algorithm. So it is basically combining the powers of randomized and deterministic algorithms.</p>
+<p>For some reasons he couldn’t take his research to conclusion, but I got interested in it. Hence I have been working on it, along with my girlfriend, during the past few months, although irregularly.</p>
+<p>I have the code ready and have been trying to solve some <em>Travelling Salesman Problem</em>s, but I need my results to be standardized and comparable to others.<br>Now how would I do that ? By solving the same problems that others have solved; that way we can compare how efficienct our new algorithm is.<br>Problem was there are thousands of TSP problems.<br>Thankfully, I came across something known as <a href="http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/" target="_blank" rel="noopener">TSPLIB</a>. A library of problems including, Symmetric/Asymmetric traveling salesman problem, Hamiltonian cycle problem (HCP), Capacitated vehicle routing problem (CVRP) and some other related category of problems.<br>Just the thing I was looking for.</p>
+<p>So it is still a work in progress and I’ll post my findings here, along with code details, later.<br>But it sure is a refreshing change from what I do at my job at Amazon.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&text=Genetic Algorithms: Some Experiments"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&is_video=false&description=Genetic Algorithms: Some Experiments"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Genetic Algorithms: Some Experiments&body=Check out this article: http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&title=Genetic Algorithms: Some Experiments"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&name=Genetic Algorithms: Some Experiments&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://www.vivek.nl/2015/10/03/Genetic-Algorithms-Some-Experiments/&t=Genetic Algorithms: Some Experiments"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Vivek Yadav
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
